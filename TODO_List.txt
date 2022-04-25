@@ -13,8 +13,8 @@ Bir araba nesnesi oluşturunuz. "Car"
 TODO-4 ✅
 Özellik olarak : Id, BrandId, ColorId, ModelYear, DailyPrice, Description alanlarını ekleyiniz. (Brand = Marka)
 
-TODO-5 ❌
+TODO-5 ✅
 InMemory formatta GetById, GetAll, Add, Update, Delete operasyonlarını yazınız.
 
-TODO-6 ❌
+TODO-6 ✅
 Consol'da test ediniz.
