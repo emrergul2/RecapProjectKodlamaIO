@@ -1,5 +1,6 @@
-Kampımızla beraber paralelde geliştireceğimiz bir projemiz daha olacak. Araba kiralama sistemi yazıyoruz.
+##LECTURE-7
 
+Kampımızla beraber paralelde geliştireceğimiz bir projemiz daha olacak. Araba kiralama sistemi yazıyoruz.
 
 TODO-1 ✅
 Yepyeni bir proje oluşturunuz. Adı ReCapProject olacak. (Tekrar ve geliştirme projesi)
@@ -18,3 +19,35 @@ InMemory formatta GetById, GetAll, Add, Update, Delete operasyonlarını yazın�
 
 TODO-6 ✅
 Consol'da test ediniz.
+
+## LECTURE-8
+
+Araba Kiralama projemiz üzerinde çalışmaya devam edeceğiz.
+
+Car nesnesine ek olarak;
+
+TODO-1 ✅
+Brand ve Color nesneleri ekleyiniz(Entity)
+
+Brand-->Id,Name
+
+Color-->Id,Name
+
+TODO-2 ✅
+Sql Server tarafında yeni bir veri tabanı kurunuz. Cars,Brands,Colors tablolarını oluşturunuz.
+
+TODO-3 ✅
+Sisteme Generic IEntityRepository altyapısı yazınız.
+
+TODO-4 ✅
+Car, Brand ve Color nesneleri için Entity Framework altyapısını yazınız.
+
+TODO-5 ✅
+GetCarsByBrandId , GetCarsByColorId servislerini yazınız.
+
+TODO-6 ✅
+6) Sisteme yeni araba eklendiğinde aşağıdaki kuralları çalıştırınız.
+
+Araba ismi minimum 2 karakter olmalıdır
+
+Araba günlük fiyatı 0'dan büyük olmalıdır

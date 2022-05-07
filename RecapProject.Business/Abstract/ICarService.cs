@@ -9,9 +9,11 @@ namespace RecapProject.Business.Abstract
     public interface ICarService
     {
         Car GetById(int carId);
+        List<Car> GetCarsByBrandId(int brandId);
+        List<Car> GetCarByColor(int colorId);
         List<Car> GetAll();
         void Add(Car car);
         void Update(Car car);
-        void Delete(int carID);
+        void Delete(Car car);
     }
 }

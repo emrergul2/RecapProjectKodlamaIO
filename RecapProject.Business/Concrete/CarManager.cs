@@ -11,20 +11,20 @@ namespace RecapProject.Business.Concrete
     public class CarManager : ICarService
     {
         ICarDal _carDal;
-
         public CarManager(ICarDal carDal)
         {
             _carDal = carDal;
         }
-
         public void Add(Car car)
         {
-            _carDal.Add(car);
+            if (car.Name.Length > 2 && car.DailyPrice > 0)
+            {
+                _carDal.Add(car);
+            }
         }
-
-        public void Delete(int carID)
+        public void Delete(Car car)
         {
-            _carDal.Delete(carID);
+            _carDal.Delete(car);
         }
 
         public List<Car> GetAll()
@@ -34,7 +34,17 @@ namespace RecapProject.Business.Concrete
 
         public Car GetById(int carId)
         {
-            return _carDal.GetById(carId);
+            return _carDal.Get(c => c.Id == carId);
+        }
+
+        public List<Car> GetCarByColor(int colorId)
+        {
+            return _carDal.GetAll(c => c.ColorId == colorId);
+        }
+
+        public List<Car> GetCarsByBrandId(int brandId)
+        {
+            return _carDal.GetAll(c => c.BrandId == brandId);
         }
 
         public void Update(Car car)

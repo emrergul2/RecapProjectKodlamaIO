@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using RecapProject.DataAccess.Abstract;
 using RecapProject.Entities.Concrete;
@@ -35,9 +36,24 @@ namespace RecapProject.DataAccess.Concrete.InMemory
             _car.Remove(deleteCar);
         }
 
+        public void Delete(Car entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Car Get(Expression<Func<Car, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Car> GetAll()
         {
             return _car;
+        }
+
+        public List<Car> GetAll(Expression<Func<Car, bool>> filter = null)
+        {
+            throw new NotImplementedException();
         }
 
         public Car GetById(int carId)
