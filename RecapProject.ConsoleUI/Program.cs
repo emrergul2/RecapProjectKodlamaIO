@@ -83,23 +83,6 @@ namespace RecapProject.ConsoleUI
             int colorCount = colorManager.GetAll().Count;
             int brandCount = brandManager.GetAll().Count;
 
-            List<Brand> brands = new List<Brand>
-            {
-                new Brand {Name="BMW"},
-                new Brand {Name="Toyota"},
-                new Brand {Name="Kia"},
-                new Brand {Name="Honda"},
-                new Brand {Name="Hyundai"},
-                new Brand {Name="Ford"},
-                new Brand {Name="Tesla"},
-                new Brand {Name="Mazda"},
-                new Brand {Name="Porsche"},
-                new Brand {Name="Nissan"},
-                new Brand {Name="Volkswagen"},
-                new Brand {Name="Volvo"},
-                new Brand {Name="Mercedes-Benz"}
-            };
-
             for (int i = 0; i < numOfCar; i++)
             {
                 Random rnd = new Random();
