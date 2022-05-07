@@ -4,12 +4,6 @@ using RecapProject.Business.Concrete;
 using RecapProject.DataAccess.Concrete.EntityFramework;
 using RecapProject.DataAccess.Concrete.InMemory;
 using RecapProject.Entities.Concrete;
-// using System.Linq;
-// using System.Collections.Generic;
-// using RecapProject.Business.Concrete;
-// using RecapProject.DataAccess.Concrete.EntityFramework;
-// using RecapProject.DataAccess.Concrete.InMemory;
-// using RecapProject.Entities.Concrete;
 
 namespace RecapProject.ConsoleUI
 {
@@ -75,9 +69,9 @@ namespace RecapProject.ConsoleUI
                 new Brand(){Name="Volvo"},
                 new Brand(){Name="Mercedes-Benz"}
             };
-            foreach (var item in brands)
+            foreach (var brand in brands)
             {
-                brandManager.Add(item);
+                brandManager.Add(brand);
             }
         }
         public void GenerateRandomCar(int numOfCar)
@@ -120,7 +114,6 @@ namespace RecapProject.ConsoleUI
                     ColorId = rnd.Next(colorCount) + 1,
                     DailyPrice = rnd.Next(100, 300),
                     ModelYear = modalYear,
-                    // Description = (brandManager.Get(brandId)).Name + " " + color + " " + modalYear,
                     Description = $"{(brandManager.Get(brandId)).Name} {color} {modalYear}",
                     Name = (brandManager.Get(brandId)).Name + " " + carBrandCount
                 };
