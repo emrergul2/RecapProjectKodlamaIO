@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using RecapProject.Entities.Concrete;
+using RecapProject.Entities.DTOs;
 
 namespace RecapProject.Business.Abstract
 {
@@ -15,5 +16,6 @@ namespace RecapProject.Business.Abstract
         void Add(Car car);
         void Update(Car car);
         void Delete(Car car);
+        List<CarDetailDto> GetCarDetails();
     }
 }

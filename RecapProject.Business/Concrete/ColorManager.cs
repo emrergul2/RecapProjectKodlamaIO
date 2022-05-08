@@ -22,6 +22,11 @@ namespace RecapProject.Business.Concrete
             _colorDal.Add(color);
         }
 
+        public void Delete(Color color)
+        {
+            _colorDal.Delete(color);
+        }
+
         public Color Get(int colorId)
         {
             return _colorDal.Get(c => c.Id == colorId);
@@ -30,6 +35,11 @@ namespace RecapProject.Business.Concrete
         public List<Color> GetAll()
         {
             return _colorDal.GetAll();
+        }
+
+        public void Update(Color color)
+        {
+            _colorDal.Update(color);
         }
     }
 }

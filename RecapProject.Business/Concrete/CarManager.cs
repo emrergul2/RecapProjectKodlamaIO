@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using RecapProject.Business.Abstract;
 using RecapProject.DataAccess.Abstract;
 using RecapProject.Entities.Concrete;
+using RecapProject.Entities.DTOs;
 
 namespace RecapProject.Business.Concrete
 {
@@ -30,6 +31,11 @@ namespace RecapProject.Business.Concrete
         public List<Car> GetAll()
         {
             return _carDal.GetAll();
+        }
+
+        public List<CarDetailDto> GetCarDetails()
+        {
+            return _carDal.GetCarDetails();
         }
 
         public Car GetById(int carId)

@@ -4,6 +4,7 @@ using RecapProject.Business.Concrete;
 using RecapProject.DataAccess.Concrete.EntityFramework;
 using RecapProject.DataAccess.Concrete.InMemory;
 using RecapProject.Entities.Concrete;
+using RecapProject.Entities.DTOs;
 
 namespace RecapProject.ConsoleUI
 {
@@ -15,7 +16,8 @@ namespace RecapProject.ConsoleUI
             EntityFrameworkTest efTest = new EntityFrameworkTest();
             // efTest.AddColor();
             // efTest.AddBrand();
-            efTest.GenerateRandomCar(1000);
+            // efTest.GenerateRandomCar(1000);
+            efTest.CarDetailDtoTEst();
         }
         static void InMemoryTest()
         {
@@ -31,6 +33,16 @@ namespace RecapProject.ConsoleUI
     }
     class EntityFrameworkTest
     {
+        public void CarDetailDtoTEst()
+        {
+            CarManager carManager = new CarManager(new EfCarDal());
+            List<CarDetailDto> allCarDetails = carManager.GetCarDetails();
+            foreach (CarDetailDto cd in allCarDetails)
+            {
+                Console.WriteLine($"{cd.CarName} -- {cd.BrandName} -- {cd.ColorName} -- {cd.DailyPrice}");
+            }
+        }
+
         public void AddColor()
         {
             ColorManager colorManager = new ColorManager(new EfColorDal());

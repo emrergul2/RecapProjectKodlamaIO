@@ -5,6 +5,7 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 using RecapProject.DataAccess.Abstract;
 using RecapProject.Entities.Concrete;
+using RecapProject.Entities.DTOs;
 
 namespace RecapProject.DataAccess.Concrete.InMemory
 {
@@ -59,6 +60,11 @@ namespace RecapProject.DataAccess.Concrete.InMemory
         public Car GetById(int carId)
         {
             return _car.SingleOrDefault(c => c.Id == carId);
+        }
+
+        public List<CarDetailDto> GetCarDetails()
+        {
+            throw new NotImplementedException();
         }
 
         public void Update(Car car)
