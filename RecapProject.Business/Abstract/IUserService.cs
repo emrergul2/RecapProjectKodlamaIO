@@ -7,12 +7,12 @@ using RecapProject.Entities.Concrete;
 
 namespace RecapProject.Business.Abstract
 {
-    public interface IBrandService
+    public interface IUserService
     {
-        IResult Add(Brand brand);
-        IResult Delete(Brand brand);
-        IResult Update(Brand brand);
-        IDataResult<List<Brand>> GetAll();
-        IDataResult<Brand> Get(int brandId);
+        IResult Add(User user);
+        IResult Update(User user);
+        IResult Delete(User user);
+        IDataResult<List<User>> GetAll();
+        IDataResult<User> Get(int userId);
     }
 }

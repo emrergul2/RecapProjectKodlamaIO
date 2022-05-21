@@ -16,14 +16,14 @@ namespace RecapProject.ConsoleUI
             EntityFrameworkTest efTest = new EntityFrameworkTest();
             // efTest.AddColor();
             // efTest.AddBrand();
-            // efTest.GenerateRandomCar(1000);
-            efTest.CarDetailDtoTEst();
+            // efTest.GenerateRandomCar(10000);
+            efTest.CarDetailDtoTest();
         }
         static void InMemoryTest()
         {
             CarManager carManager = new CarManager(new InMemoryCarDal());
 
-            List<Car> cars = carManager.GetAll();
+            List<Car> cars = carManager.GetAll().Data;
 
             foreach (var car in cars)
             {
@@ -33,10 +33,10 @@ namespace RecapProject.ConsoleUI
     }
     class EntityFrameworkTest
     {
-        public void CarDetailDtoTEst()
+        public void CarDetailDtoTest()
         {
             CarManager carManager = new CarManager(new EfCarDal());
-            List<CarDetailDto> allCarDetails = carManager.GetCarDetails();
+            List<CarDetailDto> allCarDetails = carManager.GetCarDetails().Data;
             foreach (CarDetailDto cd in allCarDetails)
             {
                 Console.WriteLine($"{cd.CarName} -- {cd.BrandName} -- {cd.ColorName} -- {cd.DailyPrice}");
@@ -92,25 +92,25 @@ namespace RecapProject.ConsoleUI
             BrandManager brandManager = new BrandManager(new EfBrandDal());
             CarManager carManager = new CarManager(new EfCarDal());
 
-            int colorCount = colorManager.GetAll().Count;
-            int brandCount = brandManager.GetAll().Count;
+            int colorCount = colorManager.GetAll().Data.Count;
+            int brandCount = brandManager.GetAll().Data.Count;
 
             for (int i = 0; i < numOfCar; i++)
             {
                 Random rnd = new Random();
                 int brandId = rnd.Next(colorCount) + 1;
                 int colorId = rnd.Next(colorCount) + 1;
-                int carBrandCount = carManager.GetCarsByBrandId(brandId).Count + 1;
+                int carBrandCount = carManager.GetCarsByBrandId(brandId).Data.Count + 1;
                 int modalYear = rnd.Next(1990, 2022);
-                string color = colorManager.Get(colorId).Name;
+                string color = colorManager.Get(colorId).Data.Name;
                 Car car = new Car()
                 {
                     BrandId = brandId,
                     ColorId = rnd.Next(colorCount) + 1,
                     DailyPrice = rnd.Next(100, 300),
                     ModelYear = modalYear,
-                    Description = $"{(brandManager.Get(brandId)).Name} {color} {modalYear}",
-                    Name = (brandManager.Get(brandId)).Name + " " + carBrandCount
+                    Description = $"{(brandManager.Get(brandId)).Data.Name} {color} {modalYear}",
+                    Name = (brandManager.Get(brandId)).Data.Name + " " + carBrandCount
                 };
                 carManager.Add(car);
             }

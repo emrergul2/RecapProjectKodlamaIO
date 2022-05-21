@@ -12,12 +12,13 @@ namespace RecapProject.DataAccess.Concrete.EntityFramework
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-2322UUL\SQLSERVER;Database=RecapProject;User Id=sa;Password=12345");
-            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-2322UUL\SQLSERVER;Initial Catalog=RecapProject;User ID=sa;Password=12345");
+            optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=RecapProject;User ID=sa;Password=Emre1234");
         }
-        //"Data Source=DESKTOP-2322UUL\SQLSERVER;Initial Catalog=RecapProject;User ID=sa;Password=12345";
         public DbSet<Car> Cars { get; set; }
         public DbSet<Color> Colors { get; set; }
         public DbSet<Brand> Brands { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Rental> Rentals { get; set; }
     }
 }

@@ -44,7 +44,7 @@ Brand ve Color nesneleri ekleyiniz(Entity)
 
 Brand-->Id,Name
 
-Color-->Id,Name
+Color-->Id,Name.
 
 ### TODO-8.2 ✅
 
@@ -93,3 +93,47 @@ Console'da Tüm CRUD operasyonlarınızı Car, Brand, Model nesneleriniz için t
 ### TODO-9.5 ✅
 
 Arabaları şu bilgiler olacak şekilde listeleyiniz. CarName, BrandName, ColorName, DailyPrice. (İpucu : IDto oluşturup 3 tabloya join yazınız)
+
+## Lecture-10
+
+---
+
+### TODO-10.1 ✅
+
+Core katmanında Results yapılandırması yapınız.
+
+### TODO-10.2 ✅
+
+Daha önce geliştirdiğiniz tüm Business sınıflarını bu yapıya göre refactor (kodu iyileştirme) ediniz.
+
+### TODO-10.3 ✅
+
+Kullanıcılar tablosu oluşturunuz. Users-->Id,FirstName,LastName,Email,Password
+
+### TODO-10.4 ✅
+
+Müşteriler tablosu oluşturunuz. Customers-->UserId,CompanyName
+
+### TODO-10.5 ✅
+
+Arabanın kiralanma bilgisini tutan tablo oluşturunuz. Rentals-->Id, CarId, CustomerId, RentDate(Kiralama Tarihi), ReturnDate(Teslim Tarihi). Araba teslim edilmemişse ReturnDate null'dır.
+
+### TODO-10.6 ✅
+
+Projenizde bu entity'leri oluşturunuz.
+
+### TODO-10.7 ✅
+
+CRUD operasyonlarını yazınız.
+
+### TODO-10.8
+
+Yeni müşteriler ekleyiniz.
+
+### TODO-10.9
+
+Arabayı kiralama imkanını kodlayınız. Rental-->Add
+
+### TODO-10.10
+
+Arabanın kiralanabilmesi için arabanın teslim edilmesi gerekmektedir.
