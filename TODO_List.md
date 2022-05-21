@@ -130,10 +130,10 @@ CRUD operasyonlarını yazınız.
 
 Yeni müşteriler ekleyiniz.
 
-### TODO-10.9
+### TODO-10.9 ✅
 
 Arabayı kiralama imkanını kodlayınız. Rental-->Add
 
-### TODO-10.10
+### TODO-10.10 ✅
 
 Arabanın kiralanabilmesi için arabanın teslim edilmesi gerekmektedir.
