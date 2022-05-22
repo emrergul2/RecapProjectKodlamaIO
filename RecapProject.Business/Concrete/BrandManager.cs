@@ -28,7 +28,7 @@ namespace RecapProject.Business.Concrete
         public IResult Delete(Brand brand)
         {
             _brandDal.Delete(brand);
-            return new SuccessResult(Messages.ItemAdded);
+            return new SuccessResult(Messages.ItemDeleted);
         }
 
         public IDataResult<Brand> Get(int brandId)

@@ -12,7 +12,7 @@ namespace RecapProject.DataAccess.Concrete.EntityFramework
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=RecapProject;User ID=sa;Password=Emre1234");
+            optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=RecapProject;User ID=sa;Password=Emre1234;");
         }
         public DbSet<Car> Cars { get; set; }
         public DbSet<Color> Colors { get; set; }
